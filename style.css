@@ -1,0 +1,196 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b132b;
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Wrapper */
+#wrapper {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Heading */
+#review-heading {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ff6363;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Main Container */
+#container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Review Form */
+#review-form {
+    width: 45%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(255, 99, 99, 0.3);
+    animation: slideInLeft 1s ease-in-out;
+}
+
+/* Feedback Collection */
+#feed-collection {
+    width: 50%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(255, 99, 99, 0.3);
+    animation: slideInRight 1s ease-in-out;
+}
+
+/* Input Fields & Textarea */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #30475e;
+    color: white;
+    transition: 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, textarea:focus {
+    background: #526d82;
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Star Rating */
+.stars {
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Submit Button */
+#submit {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff6363, #ff4a4a);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+#submit:hover {
+    background: linear-gradient(135deg, #ff4a4a, #d90429);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 99, 99, 0.5);
+}
+
+/* Review Entries */
+.review-entry {
+    background: #222831;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 15px rgba(255, 99, 99, 0.2);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(255, 99, 99, 0.4);
+}
+
+/* Review Title */
+.review-entry h3 {
+    color: #ff6363;
+    margin-bottom: 5px;
+}
+
+/* Review Author */
+.review-entry p {
+    margin: 5px 0;
+    color: #e0e1dd;
+    font-size: 1rem;
+}
+
+/* Star Rating in Review */
+.star-rating {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.star-rating span {
+    font-size: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #review-form, #feed-collection {
+        width: 100%;
+    }
+}

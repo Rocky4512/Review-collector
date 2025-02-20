@@ -47,4 +47,9 @@ button.addEventListener('click', () => {
         }
         stack.appendChild(spantag);
     }
+    NameInput.value = "";
+    titleInput.value = "";
+    reviewInput.value = "";
+    selectedrating = 0;
+    starcolor(); 
 });
